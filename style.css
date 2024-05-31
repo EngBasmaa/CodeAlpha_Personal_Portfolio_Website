@@ -1,0 +1,520 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #ededed;
+  line-height: 2rem;
+  background: #081b29;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  margin-left: 2rem;
+  position: relative;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1.5s ease forwards;
+}
+
+.navbar a {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  margin-left: 2rem;
+  transition: 0.3s;
+  opacity: 0;
+  animation: slideTop 2s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.navbar a:hover {
+  color: aqua;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 0;
+  margin-bottom: 10rem;
+  padding-right: 0;
+  border: 5px solid;
+  border-color: rgb(245, 51, 200) rgb(58, 212, 247);
+  box-shadow: 3px 0 50px rgba(58, 212, 247, 0.5),
+    -3px 0 50px rgba(58, 212, 247, 0.5), 0 3px 50px rgba(245, 51, 200, 0.8),
+    0 -3px 50px rgba(245, 51, 200, 0.8);
+}
+
+.home {
+  position: relative;
+  margin-top: 10rem;
+  width: 100%;
+  justify-content: space-between;
+  height: 100vh;
+  /* background: url(./assets/background-image.jpg) no-repeat; */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 1rem 10% 1rem;
+  display: flex;
+  gap: 8rem;
+}
+
+.home-content {
+  max-width: 50rem;
+}
+
+.home-content h3,
+.about-text h3,
+.card-body h3,
+.skills h3,
+.education h3,
+.contact h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem;
+  margin-left: 0;
+  opacity: 0;
+  animation: slideBottom 1.5s forwards;
+  animation-delay: 1s;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 30px;
+}
+
+.home-content h1,
+.about-text h1,
+.services .container h1,
+#portfolio,
+#projects,
+#skills,
+#education,
+#contact {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 2rem;
+  margin-left: 0;
+  opacity: 0;
+  animation: slideRight 1.5s ease forwards;
+  animation-delay: 1s;
+}
+
+.home-content h3 span,
+.about-text h1 span,
+.services .container h1 span,
+#portfolio span,
+#projects span,
+#skills span,
+#education span,
+#contact span {
+  color: #0ef;
+}
+
+.home-content p,
+.about-text p,
+.card-body p,
+.skills p,
+.education p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.home-sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  color: #0ef;
+  text-decoration: none;
+  margin: 3rem 2rem 3rem 0;
+  opacity: 0;
+  animation: slideLeft 1.5s forwards;
+  animation-delay: 1s;
+}
+
+.home-sci a:hover {
+  background: #0ef;
+  color: black;
+  box-shadow: 0 0 2rem #0ef;
+}
+
+.btn-box,
+.read {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #0ef;
+  border-radius: 4rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  box-shadow: 0 0 20px #0ef;
+  opacity: 0;
+  animation: slideTop 1.5s forwards;
+  animation-delay: 1s;
+  margin-bottom: 3rem;
+}
+
+.btn-box:hover {
+  background: #0ef;
+  color: black;
+  box-shadow: 0 0 30px #0ef, 0 0 40px #0ef;
+}
+
+/* .......... about section ........... */
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1rem;
+  margin-right: 4rem;
+}
+
+.about-img {
+  width: 70%;
+  height: auto;
+  margin: 8rem;
+  margin-top: 10rem;
+}
+
+.about-text h3 {
+  line-height: 1.7;
+  margin: 15px 0 30px;
+}
+
+.about-text p {
+  margin-bottom: 4rem;
+}
+
+.about-text h1 {
+  position: relative;
+  bottom: 2rem;
+  text-align: center;
+}
+
+.bx-code-alt,
+.bxl-angular,
+.bxl-react {
+  font-size: 4rem;
+  color: #00eeff;
+}
+
+#services {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin-bottom: 4rem;
+}
+
+.container {
+  padding: 6rem;
+}
+
+.services .container h1 {
+  text-align: center;
+}
+
+.services-list {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.services-list div {
+  width: 30%;
+  height: auto;
+  box-shadow: 1px 1px 20px #012290f7;
+  padding: 2rem;
+  border-radius: 4rem;
+}
+
+.services-list div h3 {
+  margin-bottom: 1.5rem;
+}
+
+.services-list div a {
+  color: black;
+  text-decoration: none;
+}
+
+.read {
+  margin: 3rem;
+  background-color: #00eeff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  letter-spacing: 0.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  box-shadow: 0 0 30px #0ef, 0 0 40px #0ef;
+}
+.read:hover {
+  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef, 0 0 50px #0ef, 0 0 100px #0ef,
+    0 0 200px #0ef;
+}
+
+.services-list div:hover,
+.card:hover {
+  transform: translateY(-30px);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* .......... portfolio ........... */
+
+#portfolio {
+  text-align: center;
+  margin: 10rem;
+}
+
+/* .......... webpages section ........... */
+
+.contact-webpages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10%;
+}
+
+.card {
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 20px #012290f7, -10px -10px 20px #012290f7;
+  padding: 2rem;
+  border-radius: 4rem;
+  height: 50rem;
+}
+
+.card-body {
+  text-align: center;
+}
+.card img {
+  width: 16rem;
+  height: 16rem;
+  margin-bottom: 3rem;
+}
+
+.card-body h3 {
+  letter-spacing: 6px;
+}
+
+/* .......... projects section ........... */
+
+.projects,
+.skills,
+.education,
+.contact {
+  border: 4px solid #00eeff;
+  margin: 5rem;
+  border-radius: 4rem;
+  box-shadow: 5px 5px 20px #00eeff, -5px -5px 20px #00eeff;
+  display: flex;
+  padding: 6rem;
+  gap: 6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#projects,
+#skills,
+#education,
+#contact {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.projects .card {
+  box-shadow: 10px 10px 20px #2553eaf7, -10px -10px 20px #2553eaf7;
+  width: 30rem;
+}
+
+/* .......... skills section ........... */
+
+.skills h3 {
+  letter-spacing: 5px;
+  font-size: 2.5rem;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.skills p {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill {
+  border: 2px solid #00eeff;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* .......... education section ........... */
+
+.education {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 4rem;
+}
+.education p,
+.education h3 {
+  line-height: 2rem;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.education h3 {
+  color: #00eeff;
+  border: 2px solid #00eeff;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.education p {
+  line-height: 2.5rem;
+}
+
+.education p a,
+.contact p a {
+  text-decoration: none;
+  color: #00eeff;
+  border: 2px solid #00eeff;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 20px #00eeff, -5px -5px 20px #00eeff;
+}
+
+.education p a:hover,
+.contact p a:hover {
+  color: black;
+  font-weight: 600;
+  background-color: #00eeff;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+/* .......... contact section ........... */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 0;
+  margin: 5rem;
+  padding: 4rem;
+}
+
+.contact p {
+  margin: 1rem;
+  opacity: 0;
+  animation: slideLeft 1.5s forwards;
+  animation-delay: 1s;
+}
+
+.copyright {
+  margin: 2rem;
+  margin-bottom: 4rem;
+  margin-left: 4rem;
+}
+/* .
+.......................................................... */
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
